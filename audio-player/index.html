@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音声ファイル再生デモ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>音声ファイル再生デモ</h1>
+    <div class="player-container">
+      <div class="audio-player">
+        <audio id="audio-element" src="voice.mp3" preload="auto"></audio>
+        <div class="player-controls">
+          <button id="play-btn" class="control-btn">再生</button>
+          <button id="pause-btn" class="control-btn">一時停止</button>
+          <button id="stop-btn" class="control-btn">停止</button>
+        </div>
+        <div class="volume-control">
+          <label for="volume">音量:</label>
+          <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+          </div>
+          <div class="time-display">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <p>※ このページが正常に動作するには、同じディレクトリに「voice.mp3」という名前の音声ファイルが必要です。</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
